@@ -1,0 +1,54 @@
+<!--pages/logs/logs.wxml-->
+<view class="container">
+<view>
+<button  bindtap='accout'>查看COLOR</button>
+</view>
+<view  wx:if="{{B1!=0&&R1!=0&&G1!=0}}">
+<view>
+<text>{{R1}}  {{G1}}  {{B1}} </text>
+</view>
+<view class='ii'>
+<view  wx:if="{{(B1-R1)>0 && (B1-G1)>0}}">蓝</view>
+<view  wx:elif="{{(R1-B1)>0 && (R1-G1)>0}}">红</view>
+<view  wx:elif="{{(G1-B1)>0}}&&{{(G1-R1)>0}}">绿</view>
+<view  wx:elif="{{(R1-B1)>0}}&&{{(B1-G1)==0}}">红</view>
+<view  wx:elif="{{(B1-R1)>0}}&&{{(R1-G1)==0}}">蓝</view>
+<view  wx:elif="{{(G1-R1)>0}}&&{{(R1-B1)==0}}">绿</view></view>
+</view>
+<view  wx:if="{{B2!=0&&R2!=0&&G2!=0}}">
+<view>
+<text>{{R2}}  {{G2}}  {{B2}} </text>
+</view>
+<view class='ii'>
+<view  wx:if="{{(B2-R2)>0 && (B2-G2)>0}}">蓝</view>
+<view  wx:elif="{{(R2-B2)>0 && (R2-G2)>0}}">红</view>
+<view  wx:elif="{{(G2-B2)>0}}&&{{(G2-R2)>0}}">绿</view>
+<view  wx:elif="{{(R2-B2)>0}}&&{{(B2-G2)==0}}">红</view>
+<view  wx:elif="{{(B2-R2)>0}}&&{{(R2-G2)==0}}">蓝</view>
+<view  wx:elif="{{(G2-R2)>0}}&&{{(R2-B2)==0}}">绿</view></view>
+</view>
+<view  wx:if="{{B3!=0&&R3!=0&&G3!=0}}">
+<view>
+<text>{{R3}}  {{G3}}  {{B3}} </text>
+</view>
+<view class='ii'>
+<view  wx:if="{{(B3-R3)>0 && (B3-G3)>0}}">蓝</view>
+<view  wx:elif="{{(R3-B3)>0 && (R3-G3)>0}}">红</view>
+<view  wx:elif="{{(G3-B3)>0}}&&{{(G3-R3)>0}}">绿</view>
+<view  wx:elif="{{(R3-B3)>0}}&&{{(B3-G3)==0}}">红</view>
+<view  wx:elif="{{(B3-R3)>0}}&&{{(R3-G3)==0}}">蓝</view>
+<view  wx:elif="{{(G3-R3)>0}}&&{{(R3-B3)==0}}">绿</view></view>
+</view>
+
+<view>
+<button bindtap='sumGet'>总价</button>
+</view>
+<view>
+<button bindtap='click'>扫码付款</button>
+</view>
+
+
+
+<view wx:if="{{sum!=0}}">{{sum}}元</view>
+
+</view>
